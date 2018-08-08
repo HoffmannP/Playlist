@@ -54,23 +54,7 @@ function uploadFile (file) {
     return window.fetch('cgi-bin/getList.php')
   })
   .then(updateListen)
-  .catch(spin.fail())
-}
-
-function getLength (file) {
-  const readAsArrayBuffer = file => {
-    return new Promise(resolve => {
-      const fr = new window.FileReader()
-      fr.onload = resolve(fr.result)
-      fr.readAsArrayBuffer(file)
-    })
-  }
-  return readAsArrayBuffer(file)
-  .then(r => {
-    const ac = new window.AudioContext()
-    return ac.decodeAudioData(fr.result)
-  })
-  .then(audioBuffer => audioBuffer.duration)
+  .catch(err => spin.fail(err))
 }
 
 function updateListen (response) {

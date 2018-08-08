@@ -38,10 +38,10 @@ body.playlist {
 }
 
 .uploader .uploads .spinner {
-  animation: do_spin 1s linear infinite;
+  animation: do_spin 1s linear infinite forwards;
 }
 .uploader .uploads .fader {
-  animation: fade_out 4.5s linear 1;
+  animation: fade_out 4.5s linear 1 forwards;
 }
 
 span.play {

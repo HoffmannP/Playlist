@@ -2,10 +2,14 @@
 
 require('lib.php');
 
+if (!array_key_exists('file', $_FILES)) {
+  throw new Exception("No file upload");
+}
+
 #----------------
 $mimetype = explode('/', $_FILES['file']['type'])[0];
 if ($mimetype !== "audio") {
-  throw new Exception("Not an audio file");
+  throw new Exception("$mimetype is not an audio file");
 }
 
 #----------------
