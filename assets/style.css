@@ -1,0 +1,88 @@
+html {
+  height: 100%;
+}
+
+body {
+  background-size: cover;
+}
+
+body.index {
+  background-image: url("index.bg.jpg");
+}
+
+body.playlist {
+  background-image: url("playlist.bg.jpg");
+}
+
+.navbar .navbar-brand {
+  background-color: white;
+  background-image: url("headshot.jpg");
+  background-size: 75%;
+  background-position: 6px 3px;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background-repeat: no-repeat;
+}
+
+.uploader .uploads span {
+  background-color: #ffffffb8;
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  border-radius: 12.5px;
+  padding: 1px 0 0 5px;
+  margin-left: 10px;
+  position: relative;
+  top: 10px;
+}
+
+.uploader .uploads .spinner {
+  animation: do_spin 1s linear infinite;
+}
+.uploader .uploads .fader {
+  animation: fade_out 4.5s linear 1;
+}
+
+span.play {
+  cursor: pointer;
+}
+
+ul li:not(.empty) {
+  padding-left: 2.5em;
+}
+
+ul li:not(.empty) .duration {
+  font-size: 80%;
+}
+
+.inActiveList li:not(.empty):before {
+  content: '+';
+  color: grey;
+  font-size: 2em;
+  margin-right: 1em;
+  position: absolute;
+  left: 0.5em;
+  top: 1.5px;
+}
+
+.activeList li:not(.empty):before {
+  content: "";
+  background-image: url('grabber.svg');
+  width: 1.5em;
+  height: 1.5em;
+  display: block;
+  position: absolute;
+  left: 0.7em;
+  top: 0.7em;
+}
+
+@keyframes do_spin {
+  from { transform: rotate(0deg);   }
+  to   { transform: rotate(359deg); }
+}
+
+@keyframes fade_out {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}

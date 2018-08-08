@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Playlist</title>
+  <link rel="stylesheet" href="assets/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/regular.css" integrity="sha384-zkhEzh7td0PG30vxQk1D9liRKeizzot4eqkJ8gB3/I+mZ1rjgQk+BSt2F6rT2c+I" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css" integrity="sha384-HbmWTHay9psM8qyzEKPc8odH4DsOuzdejtnr+OFtDmOcIVnhgReQ4GZBH7uwcjf6" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/style.css">
+  <script type="text/javascript" src="assets/html5sortable.min.js"></script>
+  <script type="text/javascript" src="assets/spinner.js"></script>
+  <script type="text/javascript" src="assets/main.js"></script>
+</head>
+<body class="playlist">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="navbar-brand"></div>
+    <div class="navbar-text">Obacht, handle with care!</div>
+  </nav>
+  <div class="container">
+    <h1 class="mt-4">Playlist</h1>
+    <div class="row">
+      <ul class="col-sm activeList list-group mt-4">
+        <li class="empty font-italic list-group-item">empty</li>
+      </ul>
+    </div>
+    <div class="uploader row">
+      <label id="dropzone" class="mt-4 btn btn-primary btn-lg">
+        &#x279a; neues Lied hochladen <small>(oder einfach hier reinziehen)</small>
+        <input id="file-upload" multiple type="file" class="d-none">
+      </label>
+      <span class="mt-4 uploads">
+        <span class="spinner">߷</span>
+      </span>
+    </div>
+    <hr>
+    <h2 class="mt-4">Nicht ausgewählte Lieder</h2>
+    <div class="row">
+      <ul class="col-sm inActiveList list-group mt-4">
+        <li class="empty font-italic list-group-item">empty</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
